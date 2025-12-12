@@ -1,0 +1,7 @@
+
+.Feedback, .FeedbackForm, .FileChooser, .FileChooserAdv, .RefExample, .BooksStore {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 8px;
+}

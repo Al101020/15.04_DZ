@@ -1,0 +1,10 @@
+#colorRGB {
+    width: 162px;
+    height: 16px;
+    
+    border: 1px solid black;
+    border-radius: 4px;
+
+    margin: 5px auto 5px auto;
+    padding: 5px;
+}

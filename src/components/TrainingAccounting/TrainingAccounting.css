@@ -1,0 +1,84 @@
+.dateCompletedOk {
+  padding: 0 0 0 0;
+}
+
+.date {
+  font-size: 10px;
+  width: 100px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+
+#date {
+  width: 88px;
+}
+
+.completed {
+  font-size: 10px;
+  width: 80px;
+  margin: 0 10px 0 10px;
+  display: inline-block;
+}
+
+#completed {
+  width: 70px;
+}
+
+.ok {
+  margin: 0 0 0 10px;
+  display: inline-block;
+}
+
+.tableTitle {
+  display: flex;
+  justify-content: center;
+  min-height: 10px;
+  min-width: 10px;
+  font-size: 10px;
+  padding: 5px;
+  margin: 10px 0 0 0;
+}
+
+.tableData {
+  border: 1px solid black;
+  border-radius: 4px;
+  
+  min-height: 10px;
+  min-width: 10px;
+}
+
+.pDate {
+  margin: 0 auto 0 0;
+}
+.pCompleted {
+  margin: 0 auto 0 auto;
+}
+.pActions {
+  margin: 0 0 0 auto;
+}
+
+
+/* styles.css */
+input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(0, 132, 132);
+}
+
+button:active {
+  background-color: rgb(0, 254, 254);
+}
