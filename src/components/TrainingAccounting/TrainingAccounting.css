@@ -1,3 +1,13 @@
+.divTrainingAccounting {
+  width: 300px;
+  text-align: center;
+
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
 .dateCompletedOk {
   padding: 0 0 0 0;
 }

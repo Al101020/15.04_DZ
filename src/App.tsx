@@ -1,21 +1,21 @@
 import { TrainingAccounting } from "./components/TrainingAccounting/TrainingAccounting";
 import { ColorConverter } from "./components/ColorConverter/ColorConverter";
-// import { Feedback } from "./components/Feedback";
-// import { FeedbackForm } from './components/FeedbackForm'
-// import { FileChooser } from './components/FileChooser'
-// import { FileChooserAdv } from './components/FileChooserAdv'
-// import { RefExample } from "./components/RefExample";
-// import { BooksStore } from "./components/BooksStore";
+// import { Feedback } from "./components_/Feedback";
+// import { FeedbackForm } from './components_/FeedbackForm'
+// import { FileChooser } from './components_/FileChooser'
+// import { FileChooserAdv } from './components_/FileChooserAdv'
+// import { RefExample } from "./components_/RefExample";
+// import { BooksStore } from "./components_/BooksStore";
 import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="ColorConverter">
+    <div className="app">
+      <div className="divColorConverter">
         <ColorConverter />
       </div>
 
-      <div className="TrainingAccounting">
+      <div className="divTrainingAccounting">
         <TrainingAccounting />
       </div>
 
