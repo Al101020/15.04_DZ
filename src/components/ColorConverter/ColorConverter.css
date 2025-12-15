@@ -11,10 +11,10 @@
 #colorRGB {
     width: 162px;
     height: 16px;
-    border: 1px solid black;
+    border: 1px solid rgb(128, 128, 128);
     border-radius: 4px;
     margin: 5px auto 5px auto;
     padding: 5px;
     color: white;
-    background: rgba(128, 128, 128, 0.2);
+    background: rgba(128, 128, 128, 0.3);
 }
