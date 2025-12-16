@@ -1,6 +1,6 @@
-import "./ColorConverter.css";
-import React,{ useState } from "react";
-import { fromHexInRgb } from "./fromHexInRgb.jsx";
+import './ColorConverter.css';
+import React,{ useState } from 'react';
+import { fromHexInRgb } from './fromHexInRgb.jsx';
 
 export const ColorConverter = () => {
   const [value, setValue] = useState('#');
@@ -8,7 +8,7 @@ export const ColorConverter = () => {
 
   const regexp = /#[a-f0-9]{6}/gi;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     const input = e.target.value;
     if (input.match(regexp) !== null) {
       setValue(input);
@@ -23,18 +23,18 @@ export const ColorConverter = () => {
   return (
     <form 
       style={{ backgroundColor: rgb }}
-      className="colorConverter"
-      autoComplete="off"
+      className='colorConverter'
+      autoComplete='off'
     >
       <input 
-        type="text" 
-        id="colorHex" 
-        name="colorHex"
+        type='text' 
+        id='colorHex' 
+        name='colorHex'
         maxLength={7} 
         value={value}
         onChange={handleChange} 
       />
-      <div id="colorRGB" className={`colorRGB  ${rgb === 'Ошибка!' ? 'error' : ''}`}>
+      <div id='colorRGB' className={`colorRGB  ${rgb === 'Ошибка!' ? 'error' : ''}`}>
         {rgb}
       </div>
     </form>

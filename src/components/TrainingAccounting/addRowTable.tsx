@@ -1,3 +1,3 @@
 export const addRowTable = () => {
-    console.log('addRowTable');
+  console.log('addRowTable');
 };
