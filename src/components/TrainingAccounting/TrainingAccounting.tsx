@@ -1,12 +1,70 @@
-// import { useState } from "react";
-// import { v4 as uuidv4 } from "uuid";
 import "./TrainingAccounting.css";
+// import { addRowTable } from "./addRowTable.tsx";
+import React from "react";// , { ReactNode }
+// import { JSX } from "react";
+import { edit } from "./edit.tsx";
+import { del } from "./del.tsx";
+
+let divDate;
+let divKm;
 
 export const TrainingAccounting = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Event type:", e.type);
-    console.log(e.target);
+    // console.log("Event type: ", e.type);
+    const target = e.target as Element ;
+    divDate = target.children[0].children[0].children[1];
+    console.log(e.target as Element);
+    
+    const date = target.children[0].children[0].children[1].value;
+    // console.log(date); // Дата
+    divKm = target.children[0].children[1].children[1];
+    const km = target.children[0].children[1].children[1].value;
+    // console.log(km); // Пройдено км
+    const table = target.children[1].children[1]
+    console.log(table); // куда вставляем
+
+    const addLine = () => {
+      const line = document.createElement('div');
+      line.className = 'line';
+      const kmLine = document.createElement('div');
+      kmLine.className = 'kmLine';
+      kmLine.textContent = km;
+      const dateLine = document.createElement('div');
+      dateLine.className = 'dateLine';
+      dateLine.textContent = date;
+
+      const editX = document.createElement('div');
+      editX.className = 'editX';
+      const editLine = document.createElement('div');
+      editLine.className = 'editLine';
+      // editLine.textContent = 'E';
+      editLine.onclick = edit;
+      const delLine = document.createElement('div');
+      delLine.className = 'delLine';
+      // delLine.textContent = 'X';
+      delLine.onclick = del;
+      editX.append(editLine);
+      editX.append(delLine);
+      
+      line.append(dateLine);
+      line.append(kmLine);
+      line.append(editX);
+      
+
+      table.append(line);
+    };
+
+    if (date && km) {
+      addLine();
+      // console.log(divDate.value);
+      divDate.value = '';
+      // console.log(divDate.value);
+      // km = '';
+      // console.log(divKm.value);
+      divKm.value = '';
+      // console.log(divKm.value);
+    };
   };
 
   return (
