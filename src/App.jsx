@@ -1,5 +1,5 @@
-import { TrainingAccounting } from './components/TrainingAccounting/TrainingAccounting';
-import { ColorConverter } from './components/ColorConverter/ColorConverter';
+import { TrainingAccounting } from './components/TrainingAccounting/TrainingAccounting.jsx';
+import { ColorConverter } from './components/ColorConverter/ColorConverter.jsx';
 import './App.css';
 
 export default function App() {

@@ -1,32 +1,23 @@
 import './TrainingAccounting.css';
 // import { addRowTable } from './addRowTable.tsx';
-// import React, { useState } from 'react';// --------------------
+import React, { useState } from 'react';
 import { addLine } from './addLine.jsx';
 import { sorting } from './sorting.jsx';
 
 export const TrainingAccounting = () => {
-  const [strolls, setStrolls] = useState([]);// --------------------
+  // const [strolls, setStrolls] = useState([]);
 
   let divDate;
   let divKm;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const target = e.target; // const divTableDate = target.children[1].children[1];
-// ------------------------------------------------------
+    const target = e.target;
+    console.log(target.children[1].children[1]);
+
+    // console.log(e.target);// addLine(target)
     const date = target.children[0].children[0].children[1].value;
     const km = target.children[0].children[1].children[1].value;
-    // console.log(date + '  -  ' + km);
-
-
-    const newStrolls = [...strolls];
-    console.log(newStrolls);
-
-    // const divDateCompletedOk = target.children[0];
-    // console.log(divDateCompletedOk);
-
-// -------------------------------------------------------
-    
 
     divDate = target.children[0].children[0].children[1];
     divKm = target.children[0].children[1].children[1];

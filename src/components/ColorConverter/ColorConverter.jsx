@@ -10,7 +10,8 @@ export const ColorConverter = () => {
 
   const handleChange = (e) => {
     const input = e.target.value;
-    if (input.match(regexp) !== null) {
+
+    if (input.match(regexp) !== null) {      // console.log(input.length);
       setValue(input);
       const { r, g, b } = fromHexInRgb(input);
         setRgb(`rgb(${r}, ${g}, ${b})`);
