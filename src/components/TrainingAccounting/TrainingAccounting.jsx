@@ -1,6 +1,6 @@
 import './TrainingAccounting.css';
 // import { addRowTable } from './addRowTable.tsx';
-// import React, { useState } from 'react';// --------------------
+import React, { useState } from 'react';// --------------------
 import { addLine } from './addLine.jsx';
 import { sorting } from './sorting.jsx';
 
