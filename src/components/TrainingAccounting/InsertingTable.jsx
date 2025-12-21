@@ -1,7 +1,10 @@
 import AddLines from './AddLines.jsx';
 
 export const InsertingTable = ({strolls}) => {
-  
+  // const str_s = {strolls};
+  // console.log(str_s);
+  // console.log(str_s.strolls);
+  // console.log(str_s.strolls[0]);
   return (
     <>
       <div className='table' autoComplete='off'>
@@ -13,7 +16,8 @@ export const InsertingTable = ({strolls}) => {
           </div>
         </div>
         <ul className='tableData'>
-          <AddLines props={strolls} />
+          { console.log({strolls}) }
+          <AddLines strolls={strolls} />
         </ul>
       </div>
     </>

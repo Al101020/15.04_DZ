@@ -20,9 +20,11 @@ export const FormForEnteringInformation = ({insertingTable}) => {
       distance: Number(infForm.distance),
     };
 
-    insertingTable(stroll);
-    
+    // console.log(infForm);
     setInfForm({ date: '', distance: '' });
+    // console.log(infForm);
+    
+    insertingTable(stroll);    
   };
 
   return (
@@ -30,11 +32,11 @@ export const FormForEnteringInformation = ({insertingTable}) => {
       <form className='form' autoComplete='off' onSubmit={handleSubmit}>
         <div className='date'>
           <label htmlFor='date'>Дата (ДД.ММ.ГГ)</label>
-          <input type="date" id='date' name='date' onChange={onChange} required /> 
+          <input type="date" id='date' name='date' value={infForm.date} onChange={onChange} required /> 
         </div>
         <div className='distance'>
           <label htmlFor='distance'>Пройдено км</label>
-          <input type='number' id='distance' name='distance' onChange={onChange} required />
+          <input type='number' id='distance' name='distance' value={infForm.distance} min='0' onChange={onChange} required />
         </div>
          <button className='ok' type='submit'>ок</button>
       </form>

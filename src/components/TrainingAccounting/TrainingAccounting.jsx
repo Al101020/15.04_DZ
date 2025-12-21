@@ -9,12 +9,27 @@ export const TrainingAccounting = () => {
 
   const insertingTable = (stroll) => {
     const newStrolls = [...strolls];
-    const searchDate = newStrolls.find((obj) => obj.date === stroll.date);
+    // console.log(newStrolls);
+    // console.log(newStrolls[0]);
+    // for (let i = 0; i <= newStrolls.length; i++) { 
+    //   console.log(newStrolls[i].id); // Вывод текущего значения переменной i в консоль 
+    // }
 
+    // console.log(stroll);
+    const searchDate = newStrolls.find((obj) => obj.date === stroll.date);
+    // console.log(searchDate);
+    
     if (searchDate) {
+      console.log(searchDate);
+      console.log(stroll);
       searchDate.distance += stroll.distance;
     } else {
+      // console.log(searchDate);
+      // console.log(newStrolls);
+      
       newStrolls.push(stroll);
+      // console.log(stroll);
+      // console.log(newStrolls);
       newStrolls.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
     }
 
