@@ -20,7 +20,6 @@
 }
 
 #date {
-  /* width: 88px; */
   width: 100px;
 }
 
@@ -70,8 +69,6 @@
   margin: 0 0 0 auto;
 }
 
-
-/* styles.css */
 input {
   padding: 5px;
   border-radius: 4px;
@@ -98,7 +95,6 @@ button:active {
 
 /* Вставляемая строка */
 .line {
-  /* display: inline-block; */
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
@@ -106,30 +102,22 @@ button:active {
 }
 
 .dateLine {
-  /* margin: 0 0 0 10px; */
   display: inline-block;
 }
 
 .kmLine {
-  /* margin: 0 20px; */
   display: inline-block;
 }
 
-
-
 .editX {
-  /* margin: 0 5px; */
   display: inline-block;
 }
 
 .editLine {
-  /* margin: 0 5px; */
   display: inline-block;
   width: 20px;
   height: 20px;
-  /* border: 1px solid black; */
   border-radius: 3px;
-
   background-image: url('./png/edit.png');
   background-size: contain;
   cursor: pointer;
@@ -140,11 +128,8 @@ button:active {
   display: inline-block;
   width: 20px;
   height: 20px;
-  /* border: 1px solid black; */
   border-radius: 3px;
-
   background-image: url('./png/del.png');
-  background-size: contain; 
-  /* background-size: 100% 100%; */
+  background-size: contain;
   cursor: pointer;
 }

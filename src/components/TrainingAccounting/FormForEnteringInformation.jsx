@@ -8,7 +8,7 @@ export const FormForEnteringInformation = ({insertingTable}) => {
     const name = target.name;
     const value = target.value;
 
-    setInfForm((prevForm) => ({ ...prevForm, [name]: value }));    // console.log(infForm);
+    setInfForm((prevInfForm) => ({ ...prevInfForm, [name]: value }));    // console.log(infForm);
   }
 
   const handleSubmit = (e) => {
@@ -20,15 +20,12 @@ export const FormForEnteringInformation = ({insertingTable}) => {
       distance: Number(infForm.distance),
     };
 
-    // console.log(infForm);
     setInfForm({ date: '', distance: '' });
-    // console.log(infForm);
-    
+
     insertingTable(stroll);    
   };
 
   return (
-    
       <form className='form' autoComplete='off' onSubmit={handleSubmit}>
         <div className='date'>
           <label htmlFor='date'>Дата (ДД.ММ.ГГ)</label>
@@ -40,6 +37,5 @@ export const FormForEnteringInformation = ({insertingTable}) => {
         </div>
          <button className='ok' type='submit'>ок</button>
       </form>
-    
   );
 };
