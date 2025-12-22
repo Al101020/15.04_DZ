@@ -16,7 +16,7 @@ export const TrainingAccounting = () => {
     // }
 
     // console.log(stroll);
-    const searchDate = newStrolls.find((obj) => obj.date === stroll.date);
+    const searchDate = newStrolls.find((line) => line.date === stroll.date);
     // console.log(searchDate);
     
     if (searchDate) {
@@ -35,13 +35,24 @@ export const TrainingAccounting = () => {
 
     setStrolls(newStrolls);
   };
+// ------------
+  const idLineDel = (id) => {
+    setStrolls((strollsWithoutIdLine) => strollsWithoutIdLine.filter((line) => line.id !== id));
+  };
+  const idLineEdit = (id) => {
+    const lineId = strolls.find((line) => line.id === id);
+    let dateValue = document.querySelector('#date');
+    dateValue.value = lineId.date;
+    let kmValue = document.querySelector('#distance');
+    kmValue.value = lineId.distance;
+    console.log(lineId);
+  };
 
-  
-
+// ------------
   return (
     <div className='trainingAccounting' autoComplete='off'>
       <FormForEnteringInformation insertingTable={insertingTable} />
-      <InsertingTable strolls={strolls}/>
+      <InsertingTable strolls={strolls} idLineDel={idLineDel} idLineEdit={idLineEdit} />
     </div>
   );
 };

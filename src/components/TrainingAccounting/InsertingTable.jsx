@@ -1,6 +1,6 @@
 import AddLines from './AddLines.jsx';
 
-export const InsertingTable = ({strolls}) => {
+export const InsertingTable = ({strolls, idLineDel, idLineEdit}) => {
   // const str_s = {strolls};
   // console.log(str_s);
   // console.log(str_s.strolls);
@@ -17,7 +17,7 @@ export const InsertingTable = ({strolls}) => {
         </div>
         <ul className='tableData'>
           { console.log({strolls}) }
-          <AddLines strolls={strolls} />
+          <AddLines strolls={strolls} idLineDel={idLineDel} idLineEdit={idLineEdit} />
         </ul>
       </div>
     </>

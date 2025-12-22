@@ -1,7 +1,7 @@
 .trainingAccounting {
   width: 300px;
   text-align: center;
-
+  background: rgb(118, 142, 132);
   margin: 20px auto;
   padding: 15px;
   border: 1px solid black;
@@ -53,9 +53,11 @@
 .tableData {
   border: 1px solid black;
   border-radius: 4px;
-  
+  background: white;
   min-height: 10px;
   min-width: 10px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .pDate {
